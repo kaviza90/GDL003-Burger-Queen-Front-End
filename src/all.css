@@ -1,0 +1,63 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    background-color:#b7e778;
+  }
+
+.myButton {
+	-moz-box-shadow: 12px 20px 0px 3px #f0f0f0;
+	-webkit-box-shadow: 12px 20px 0px 3px #f0f0f0;
+	box-shadow: 12px 20px 0px 3px #f0f0f0;
+	background-color:#be6284;
+	-moz-border-radius:30px;
+	-webkit-border-radius:30px;
+	border-radius:30px;
+	border:6px solid #40dab1;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:25px;
+	padding:32px 36px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #0a0a09;
+}
+.myButton:hover {
+	background-color:#be6284;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+
+.myButtonTwo {
+	-moz-box-shadow: 12px 20px 0px 3px #f0f0f0;
+	-webkit-box-shadow: 12px 20px 0px 3px #f0f0f0;
+	box-shadow: 12px 20px 0px 3px #f0f0f0;
+	background-color:#40dab1;
+	-moz-border-radius:30px;
+	-webkit-border-radius:30px;
+	border-radius:30px;
+	border:6px solid #ed7575;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:25px;
+	padding:19px 35px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #0a0a09;
+}
+.myButtonTwo:hover {
+	background-color:#40dab1;
+}
+.myButtonTwo:active {
+	position:relative;
+	top:1px;
+}
+
+        
