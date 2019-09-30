@@ -45,10 +45,6 @@
 	top:1px;
 }
 
-
-
-
-
 .myButtonTwo {
 	-moz-box-shadow: 12px 20px 0px 3px #f0f0f0;
 	-webkit-box-shadow: 12px 20px 0px 3px #f0f0f0;
@@ -77,4 +73,32 @@
 	top:1px;
 }
 
-        
+.Button {
+	-moz-box-shadow: 12px 20px 0px 3px #f0f0f0;
+	-webkit-box-shadow: 12px 20px 0px 3px #f0f0f0;
+	box-shadow: 12px 20px 0px 3px #8eb65b;
+	background-color:#40dab1;
+	-moz-border-radius:30px;
+	-webkit-border-radius:30px;
+	border-radius:30px;
+	border:6px solid #ed7575;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:25px;
+	padding:19px 35px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #0a0a09;
+    margin-top: 3%;
+    margin-left: 3%;
+}
+.myButtonTwo:hover {
+	background-color:#40dab1;
+}
+.myButtonTwo:active {
+	position:relative;
+	top:1px;
+}
+
+               
