@@ -97,21 +97,45 @@
 	color: white;
 }
 
-.Nav {
+.Nav ul {
+	width: 100%;
+	float: left;
+	list-style: none;
 	background-color: green;
-min-height: 12vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-font-size: calc(10px + 2vmin);
-color:white;
+	min-height: 12vh;
+	display: inline-flex;
+	font-size: calc(10px + 2vmin);
+	color:white;
+	
+}
+
+.Cont p{
+	text-align: center;
+	font-size: 100px;
+}
+
+.Cont ul{
+	list-style: none;
 }
 
 .Cont {
+	float: left;
 	background-color: coral;
-	display: block;
-	width: 50%;
-	align-items: stretch;
+	display: flex;
+	width: 60%;
+	align-items: float;
+	font-size: calc(10px + 2vmin);
+	color: white;
+	margin: 10px;
+	list-style: none;
+
+}
+
+.Cont2 {
+	float: right;
+	background-color: coral;
+	width: 35%;
+	align-items: float;
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
 	color: white;
