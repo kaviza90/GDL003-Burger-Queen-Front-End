@@ -1,7 +1,6 @@
 import React from 'react'
 import ButtonItem from '../components/ButtonItem';
 import ButtonItemTwo from '../components/ButtonItemTwo';
-import input from '../components/Input';
 import '../all.css'
 
 
@@ -9,16 +8,16 @@ import '../all.css'
 class VeganFood extends React.Component{
     render(){
         return(
-         <div className="App">
-             <header className="App-header">
-                 logo
+        <div className="App">
+        <div className="App-header">
             <ul>
-           <li><input Table /></li> 
-           <li><input Waiter-Waitress/></li>
-           </ul>
-        </header>
-     
-     
+                <li><input /> Table</li> 
+                <li><input /> Waiter</li>
+            </ul>
+        </div>
+        
+
+
         <div>
          <nav className="Nav">
             <ul>
@@ -27,9 +26,18 @@ class VeganFood extends React.Component{
                 <li><ButtonItem /></li> 
            </ul>
         </nav>
-
+        
+        <div className="title-Menu">
+            
+                <p>Menu</p>
+                <h1>Total Cliente....</h1>
+        
+        </div>
+        
         <div className="Cont" id="contMenu">
+
         <p>MENÚ</p>
+
             <ul>
              <li><ButtonItemTwo /></li>
              <li><ButtonItemTwo /></li>
@@ -37,11 +45,17 @@ class VeganFood extends React.Component{
              <li><ButtonItemTwo /></li>
              <li><ButtonItemTwo /></li>
             </ul>
+                
         </div>
 
         <div className="Cont2">
+
+            <p>contenedor 2</p>
+            
+
             <p>Ticket</p>
             <ButtonItemTwo />
+
         </div>
      </div>
 </div>
