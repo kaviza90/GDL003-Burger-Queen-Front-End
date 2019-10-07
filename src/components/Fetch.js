@@ -1,7 +1,7 @@
 import React from 'react';
 
 const API = 'https://rickandmortyapi.com/api/character/';
-const defaultQuery = '?name=dr&gender=';
+const defaultQuery = '?name=dr&gender=female';
 
 
 class FetchApi extends React.Component {
@@ -10,30 +10,54 @@ class FetchApi extends React.Component {
 
     this.state = {
       results: [],
+      error: null,
     };
+    this.myfunction = this.myfunction.bind(this);
+
   }
+
+  myfunction() {
+    fetch(API + defaultQuery)
+      .then(
+         (response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error ('Something went wrong ...');
+        }
+      })
+    //  .then(response => {response.json()})
+      .then(parsedJSON => this.setState( {results: parsedJSON.results}))
+      //.then(api => this.setState({ results: api.results }))
+      .catch(error => this.setState({ error }));
+  }
+
 
   componentDidMount() {
-    fetch(API + defaultQuery)
-      .then(response => response.json())
-      .then(data => this.setState({ results: data.results }))
+    this.myfunction();
+}
 
-  }
+
 render() {
-  const { results } = this.state;
+  const { results, error } = this.state;
+
+  if (error) {
+    return <p>{error.message}</p>;
+  } else {
+
 
   return (
     <ul>
-      {results.map(point =>
-        <li key={point.id}>
-          <a href={point.image}>{point.name}</a>
+      {this.state.results.map(result => (
+        <li key={result.id}>
+          <a href={result.image}>{result.name}</a>
         </li>
-      )}
+      ))}
     </ul>
   );
 }
 
-
+}
 }
 
 export default FetchApi;

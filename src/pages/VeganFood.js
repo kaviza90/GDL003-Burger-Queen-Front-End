@@ -32,8 +32,8 @@ class VeganFood extends React.Component{
         <div className="Cont" id="contMenu">
         <p>MENÚ</p>
             <ul>
-             <li><FetchApi /></li>
-             <li><ButtonItemTwo /></li>
+
+             
              <li><ButtonItemTwo /></li>
              <li><ButtonItemTwo /></li>
              <li><ButtonItemTwo /></li>

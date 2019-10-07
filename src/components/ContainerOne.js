@@ -7,12 +7,12 @@ class ContainerOne extends React.Component{
      return(
          <div>
              <div className= "grid-container">
-
+             <FetchApi />
              </div>
          </div>
 
      )
- }   
+ }
 
 }
 

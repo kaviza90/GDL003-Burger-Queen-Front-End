@@ -1,5 +1,6 @@
-import React from 'react'
-import '../all.css'
+import React from 'react';
+import '../all.css';
+//import FetchApi from './components/Fetch';
 
 
 class ButtonItemTwo extends React.Component{
@@ -8,7 +9,7 @@ class ButtonItemTwo extends React.Component{
          <button className= "myButtonTwo" >Chiles Rellenos   $70</button>
 
      )
- }   
+ }
 
 }
 

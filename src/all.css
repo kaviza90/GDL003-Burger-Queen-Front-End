@@ -13,14 +13,14 @@
     border:6px solid #ed7575;
     margin-top: 3%;
     margin-left: 3%;
-    
+
 
   }
 
 .myButton {
-	-moz-box-shadow: 12px 20px 0px 3px #f0f0f0;
+	/*-moz-box-shadow: 12px 20px 0px 3px #f0f0f0;
 	-webkit-box-shadow: 12px 20px 0px 3px #f0f0f0;
-	box-shadow: 12px 20px 0px 3px #d6d8d4;
+	box-shadow: 12px 20px 0px 3px #d6d8d4; */
 	background-color:#be6284;
 	-moz-border-radius:30px;
 	-webkit-border-radius:30px;
@@ -30,10 +30,11 @@
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Trebuchet MS;
-	font-size:25px;
+	font-size:1.5em;
 	padding:32px 36px;
+  margin: 5vh;
 	text-decoration:none;
-    text-shadow:0px 1px 0px #0a0a09;
+  /*  text-shadow:0px 1px 0px #0a0a09;*/
     margin-top: 3%;
     margin-left: 3%;
 }
@@ -46,9 +47,9 @@
 }
 
 .myButtonTwo {
-	-moz-box-shadow: 12px 20px 0px 3px #f0f0f0;
+/*	-moz-box-shadow: 12px 20px 0px 3px #f0f0f0;
 	-webkit-box-shadow: 12px 20px 0px 3px #f0f0f0;
-	box-shadow: 12px 20px 0px 3px #8eb65b;
+	box-shadow: 12px 20px 0px 3px #8eb65b; */
 	background-color:#40dab1;
 	-moz-border-radius:30px;
 	-webkit-border-radius:30px;
@@ -61,8 +62,8 @@
 	font-size:25px;
 	padding:19px 35px;
 	text-decoration:none;
-    text-shadow:0px 1px 0px #0a0a09;
-   
+  /*  text-shadow:0px 1px 0px #0a0a09;*/
+
 }
 .myButtonTwo:hover {
 	background-color:#40dab1;
@@ -73,9 +74,9 @@
 }
 
 .Button {
-	-moz-box-shadow: 12px 20px 0px 3px #f0f0f0;
-	-webkit-box-shadow: 12px 20px 0px 3px #f0f0f0;
-	box-shadow: 12px 20px 0px 3px #8eb65b;
+	/*-moz-box-shadow: 6px 10px 0px 3px #f0f0f0;
+	-webkit-box-shadow: 6px 10px 0px 3px #f0f0f0;
+	box-shadow: 6px 10px 0px 3px #8eb65b; */
 	background-color:#40dab1;
 	-moz-border-radius:30px;
 	-webkit-border-radius:30px;
@@ -88,7 +89,7 @@
 	font-size:25px;
 	padding:19px 35px;
 	text-decoration:none;
-    text-shadow:0px 1px 0px #0a0a09;
+    /*text-shadow:0px 1px 0px #0a0a09;*/
     margin-top: 3%;
     margin-left: 3%;
 }
@@ -98,20 +99,24 @@
 	float: left;
 	list-style: none;
 	background-color: green;
-	min-height: 12vh;
+	min-height: 25vh;
 	display: inline-flex;
 	font-size: calc(10px + 2vmin);
 	color:white;
-	
+  margin: 0;
+
 }
 
 .Cont p{
-	text-align: center;
-	font-size: 100px;
+
+	text-align: left;
+	font-size: 2.5em;
+  align-content:flex-end;
 }
 
 .Cont ul{
 	list-style: none;
+
 }
 
 .Cont {
@@ -119,10 +124,10 @@
 	background-color: coral;
 	display: flex;
 	width: 60%;
-	align-items: float;
+
 	font-size: calc(10px + 2vmin);
 	color: white;
-	margin: 10px;
+	margin: 0px;
 	list-style: none;
 
 }
@@ -130,12 +135,14 @@
 .Cont2 {
 	float: right;
 	background-color: coral;
-	width: 35%;
-	align-items: float;
+	width: 39%;
+  height: 90%;
+  display: flex;
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
 	color: white;
-	margin: 10px;
+	margin: 0px;
+
 }
 .myButtonTwo:hover {
 	background-color:#40dab1;
@@ -144,5 +151,3 @@
 	position:relative;
 	top:1px;
 }
-
-               
