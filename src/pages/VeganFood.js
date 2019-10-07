@@ -35,7 +35,9 @@ class VeganFood extends React.Component{
         </div>
         
         <div className="Cont" id="contMenu">
-        
+
+        <p>MENÚ</p>
+
             <ul>
              <li><ButtonItemTwo /></li>
              <li><ButtonItemTwo /></li>
@@ -47,8 +49,13 @@ class VeganFood extends React.Component{
         </div>
 
         <div className="Cont2">
+
             <p>contenedor 2</p>
             
+
+            <p>Ticket</p>
+            <ButtonItemTwo />
+
         </div>
      </div>
 </div>
