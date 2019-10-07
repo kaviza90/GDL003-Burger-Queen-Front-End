@@ -4,14 +4,15 @@ import './App.css';
 import VeganFood from './pages/VeganFood';
 //import FetchApi from './components/Fetch';
 
+
 function App() {
   return (
     <BrowserRouter>
          <Switch>
             <Route exact path="/VeganFood" component={VeganFood}/>
         </Switch>
-        </BrowserRouter>
+        </BrowserRouter>     
   );
 }
-
 export default App;
+

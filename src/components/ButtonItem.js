@@ -4,7 +4,7 @@ import FetchApi from './Fetch';
 import '../all.css';
 
 const API = 'https://rickandmortyapi.com/api/character/';
-const defaultQuery = '?name=dr&gender=female';
+const defaultQuery = '?name=dr';
 
 class ButtonItem extends React.Component{
 
