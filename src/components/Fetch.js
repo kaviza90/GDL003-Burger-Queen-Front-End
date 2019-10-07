@@ -4,7 +4,7 @@ export default class FetchApi extends React.Component {
 
     state = {
         loading: true,
-        name: null,
+        name: true,
     }
 
 async componentDidMount() {
