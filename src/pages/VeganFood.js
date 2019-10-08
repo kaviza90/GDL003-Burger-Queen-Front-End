@@ -1,9 +1,12 @@
-import React from 'react'
+
+import React from 'react';
 import ButtonItem from '../components/ButtonItem';
 import ButtonItemTwo from '../components/ButtonItemTwo';
 import input from '../components/Input';
+
 import FetchApi from '../components/Fetch';
 import '../all.css'
+import '../all.css';
 
 
 
@@ -61,8 +64,11 @@ class VeganFood extends React.Component{
 </div>
 
             )
+ 
     }
 
 }
+
+
 
 export default VeganFood;
