@@ -1,7 +1,10 @@
 import React from 'react';
+import ButtonItem from './ButtonItem'
+
 
 const API = 'https://rickandmortyapi.com/api/character/';
 const defaultQuery = '?name=dr&gender=female';
+
 
 
 class FetchApi extends React.Component {
@@ -10,6 +13,7 @@ class FetchApi extends React.Component {
 
     this.state = {
       results: [],
+      name: [],
       error: null,
     };
     this.myfunction = this.myfunction.bind(this);
@@ -35,7 +39,7 @@ class FetchApi extends React.Component {
 
   componentDidMount() {
     this.myfunction();
-}
+  }
 
 
 render() {
@@ -50,7 +54,8 @@ render() {
     <ul>
       {this.state.results.map(result => (
         <li key={result.id}>
-          <a href={result.image}>{result.name}</a>
+          <ButtonItem  />
+
         </li>
       ))}
     </ul>
