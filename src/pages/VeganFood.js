@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import ButtonItem from '../components/ButtonItem';
 import ButtonItemTwo from '../components/ButtonItemTwo';
-import input from '../components/Input';
+
 import FetchApi from '../components/Fetch';
-import '../all.css'
+import '../all.css';
 
 
 
@@ -31,7 +31,7 @@ class VeganFood extends React.Component{
         
         <div className="title-Menu">
             
-                <p>Menu</p>
+                <p>Menú</p>
                 <h1>Total Cliente....</h1>
         
         </div>
@@ -51,20 +51,16 @@ class VeganFood extends React.Component{
         </div>
 
         <div className="Cont2">
-
-            <p>contenedor 2</p>
-            
-
             <p>Ticket</p>
             <ButtonItemTwo />
-
-        </div>
+         </div>
      </div>
 </div>
-
-            )
+ )
     }
 
 }
+
+
 
 export default VeganFood;
