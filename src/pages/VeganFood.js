@@ -3,6 +3,8 @@ import ButtonItem from '../components/ButtonItem';
 import ContainerOne from '../components/ContainerOne';
 import ButtonItemTwo from '../components/ButtonItemTwo';
 import Item from '../components/Item';
+import InputTable from '../components/Input';
+import Comanda from '../components/Comanda';
 
 import '../all.css';
 
@@ -12,10 +14,13 @@ class VeganFood extends React.Component{
     super(props);
     this.state = {
       results: [ ],
-      order: [ ]
+      order: [ ],
+     
     };
   //  this.setItems = this.setItems.bind(this);
   }
+
+ 
 
   setItems = (results)=> {
     this.setState({
@@ -38,9 +43,10 @@ class VeganFood extends React.Component{
   render(){
     return(
       <div className="App">
-        <header className="App-header">
+        <header className="App-header"> 
+
           <h3 className="Logo">TLAKUALI</h3>
-          <p className="inputLi">Table<input /></p>
+         
         </header>
 
         <div>
@@ -69,6 +75,8 @@ class VeganFood extends React.Component{
 
           <div className="order Cont2">
               <h1>VeganFood</h1>
+              <InputTable/>
+              <Comanda/>
               <div className="orderForm">
                   <p className="form">MESA</p>
                   <p>Ticket</p>
