@@ -6,46 +6,16 @@ import '../all.css';
 
 class ContainerOne extends React.Component{
 
-
-  constructor() {
-    super();
-    this.state = {
-      results: []
-    };
-  }
-
-
-handleClick(){
-
-}
-
-
-componentDidMount() {
-  const { products } = this.state;
-  this.setState({ results: ButtonItem.results });
-}
-
-
-
  render(){
 
     return(
-      <div>
-        <div className= "grid-container">
-          <ul>
-            {this.state.results.map((type, index)=> (
-              <li key={index}>
-                <button className = "myButton" onClick = {
-                  () => this.handleClick(type) } > { type } { this.location }
-                < /button>
-              </li>
-            ))}
-          </ul>
-
+        <div>
+          <input type = "text" value = {this.props.myDataProp}
+              onChange = {this.props.updateStateProp} />
+            <h3>{this.props.myDataProp}</h3>
         </div>
-      </div>
-     )
- }
+    )
+  }
 
 }
 

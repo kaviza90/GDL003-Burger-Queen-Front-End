@@ -14,19 +14,28 @@ class VeganFood extends React.Component{
       results: [ ],
       order: [ ]
     };
-  //  this.setItems = this.setItems.bind(this);
-  }
+    this.handleClick = this.handleClick.bind(this);
 
-  setItems = (results)=> {
+  //  this.setItems = this.setItems.bind(this);
+};
+
+
+updateState(e) {
+  this.setState({order: e.target.value});
+}
+
+setItems = (results)=> {
     this.setState({
       results: results
     })
   }
 
-  addItem = (results)=> {
-    const orderArray= this.state.results;
-    return orderArray;
-  }
+
+handleClick(result){
+  const { results } = this.state.results;
+  console.log({result});
+}
+
 
 
   componentDidMount() {
@@ -40,7 +49,7 @@ class VeganFood extends React.Component{
       <div className="App">
         <header className="App-header">
           <h3 className="Logo">TLAKUALI</h3>
-          <p className="inputLi">Table<input /></p>
+          
         </header>
 
         <div>
@@ -54,14 +63,16 @@ class VeganFood extends React.Component{
 
 
           <div className="itemsSubmenu">
-            <ul>
-              {
-                this.state.results.map(result => {
-                  return (
-                    <button className="buttonsSubmenu myButton myButtonTwo" onClick={this.addItem} > {result.name}
-                    </button>
+            <ul className="submenu">
+              {this.state.results.map((result, index)=> (
+                  <li key={index}>
+                      <button className="buttonsSubmenu myButton myButtonTwo"
+                              onClick={ () => this.handleClick(result)}>
+                          {result.name}
+                      </button>
+                    </li>
                   )
-                })
+                )
               }
             </ul>
           </div>
@@ -72,11 +83,12 @@ class VeganFood extends React.Component{
               <div className="orderForm">
                   <p className="form">MESA</p>
                   <p>Ticket</p>
-
               </div>
               <div className="orderList">
-                  {this.addItem}
+                <p>orden{this.state.order}</p>
+
               </div>
+
           </div>
 
         </div>
@@ -86,6 +98,7 @@ class VeganFood extends React.Component{
     )
   }
 }
+
 
 
 

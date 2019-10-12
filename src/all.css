@@ -157,6 +157,9 @@
 	margin: 0px;
 	list-style: none;
 }
+.submenu{
+  list-style: none;
+}
 
 .itemsSubmenu{
   float: left;

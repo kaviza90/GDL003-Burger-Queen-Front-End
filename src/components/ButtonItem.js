@@ -68,7 +68,7 @@ class ButtonItem extends React.Component {
               <li key={index}>
                 <button className = "myButton" onClick = {
                   () => this.handleClick(type) } > { type } { this.location }
-                < /button>
+                </button>
               </li>
             ))}
           </ul>
@@ -80,4 +80,4 @@ class ButtonItem extends React.Component {
 
 
 }
-export default ButtonItem
+export default ButtonItem;
