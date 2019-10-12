@@ -1,72 +1,90 @@
-
 import React from 'react';
 import ButtonItem from '../components/ButtonItem';
+import ContainerOne from '../components/ContainerOne';
 import ButtonItemTwo from '../components/ButtonItemTwo';
-import input from '../components/Input';
+import Item from '../components/Item';
 
-import FetchApi from '../components/Fetch';
-import '../all.css'
 import '../all.css';
 
 
-
 class VeganFood extends React.Component{
-    render(){
-        return(
-         <div className="App">
-             <header className="App-header">
-                 VEGAN FOOD
-            <ul>
-           <li>Table<input /></li>
-           <li>Waiter-Waitress<input /></li>
-           </ul>
+  constructor(props) {
+    super(props);
+    this.state = {
+      results: [ ],
+      order: [ ]
+    };
+  //  this.setItems = this.setItems.bind(this);
+  }
+
+  setItems = (results)=> {
+    this.setState({
+      results: results
+    })
+  }
+
+  addItem = (results)=> {
+    const orderArray= this.state.results;
+    return orderArray;
+  }
+
+
+  componentDidMount() {
+    const { results } = this.state;
+    console.log({results});
+  }
+
+
+  render(){
+    return(
+      <div className="App">
+        <header className="App-header">
+          <h3 className="Logo">TLAKUALI</h3>
+          <p className="inputLi">Table<input /></p>
         </header>
 
-
         <div>
-         <nav className="Nav">
+            <div className="title-Menu">
+              <p>Menú</p>
+              <nav className="Nav">
+                 <ButtonItem
+                  setItems= { this.setItems }/>
+              </nav>
+            </div>
 
-              <ButtonItem />
 
-        </nav>
-
-        <div className="title-Menu">
-
-                <p>Menu</p>
-                <h1>Total Cliente....</h1>
-
-        </div>
-
-        <div className="Cont" id="contMenu">
-
-        <p>MENÚ</p>
-
+          <div className="itemsSubmenu">
             <ul>
-
-
-             <li></li>
-             <li></li>
-             <li></li>
+              {
+                this.state.results.map(result => {
+                  return (
+                    <button className="buttonsSubmenu myButton myButtonTwo" onClick={this.addItem} > {result.name}
+                    </button>
+                  )
+                })
+              }
             </ul>
+          </div>
+
+
+          <div className="order Cont2">
+              <h1>VeganFood</h1>
+              <div className="orderForm">
+                  <p className="form">MESA</p>
+                  <p>Ticket</p>
+
+              </div>
+              <div className="orderList">
+                  {this.addItem}
+              </div>
+          </div>
 
         </div>
-
-        <div className="Cont2">
-
-            <p>contenedor 2</p>
+      </div>
 
 
-            <p>Ticket</p>
-            <ButtonItemTwo />
-
-        </div>
-     </div>
-</div>
-
-            )
- 
-    }
-
+    )
+  }
 }
 
 

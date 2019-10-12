@@ -1,33 +1,38 @@
 import React from 'react';
-import FetchApi from './Fetch';
 
+import ContainerOne from './ContainerOne';
 import '../all.css';
 
 const API = 'https://rickandmortyapi.com/api/character/';
-const dr = '?name=dr';
-const drFemale = '?name=dr&gender=female';
-const drMale = '?name=dr&gender=male';
+const dr = '?name=rick';
 
 class ButtonItem extends React.Component {
-  constructor(props) {
+    types = ["Alive", "Dead", "unknown"];
+
+    constructor(props) {
     super(props);
     this.state = {
       results: [],
-      name: [],
-      error: null
+      namesOfProducts: [],
+      error: null,
+      products: []
     }
-
-  }
-  handleClick() {
-    this.fetchFunction();
+    this.handleClick = this.handleClick.bind(this);
   }
 
+  handleClick(type) {
+       const productsType = this.state.results.filter((product) => (type === product.status) );
+       const arrayOfProducts = productsType.forEach(function(element) {
+         console.log("nombre: " + element.name + " location: " + element.location.name);
+        })
+       console.log(productsType);
+      this.props.setItems(productsType);
+  }
 
 
   fetchFunction() {
-    fetch(API + drFemale)
-      .then(
-        (response) => {
+    fetch(API + dr)
+      .then((response) => {
           if (response.ok) {
             return response.json();
           } else {
@@ -36,9 +41,9 @@ class ButtonItem extends React.Component {
         })
       //  .then(response => {response.json()})
       .then(parsedJSON => this.setState({
-        results: parsedJSON.results,
-        name: parsedJSON.results.name
+        results: parsedJSON.results
       }))
+
       //.then(api => this.setState({ results: api.results }))
       .catch(error => this.setState({
         error
@@ -50,23 +55,29 @@ class ButtonItem extends React.Component {
   }
 
   render() {
-    const {results, name, error} = this.state;
+    const {results, error} = this.state;
 
     if (error) {
       return <p> { error.message } </p>;
     } else {
 
       return(
+        <div>
           <ul>
-          {this.state.results.map(result => (
-            <li key={result.id}>
-            <button className = "myButton" onClick = { this.handleClick.bind(this) } > { result.name } < /button>;
-            </li>
-              ))}
+            {this.types.map((type, index)=> (
+              <li key={index}>
+                <button className = "myButton" onClick = {
+                  () => this.handleClick(type) } > { type } { this.location }
+                < /button>
+              </li>
+            ))}
           </ul>
+        </div>
       )
-    }
 
+    }
   }
+
+
 }
 export default ButtonItem
