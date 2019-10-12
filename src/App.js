@@ -11,8 +11,7 @@ function App() {
          <Switch>
             <Route exact path="/VeganFood" component={VeganFood}/>
         </Switch>
-        </BrowserRouter>     
+        </BrowserRouter>
   );
 }
 export default App;
-
