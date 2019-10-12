@@ -7,14 +7,12 @@
     /* display: grid;
     grid-template-columns: 33% 33% 33%; */
     background-color:#b7e778;
-    width: 700px;
-    height: 400px;
+    width: 70vh;
+    height: 60vh;
     border-radius:30px;
     border:6px solid #ed7575;
     margin-top: 3%;
-    margin-left: 3%;
-
-
+    margin-left: 0%;
   }
 
 .myButton {
@@ -24,14 +22,14 @@
 		font-size: 20px;
 		margin-left: 10px;
 		color: #ffffff;
-		background-color: gray;
+		background-color: #01965eff;
 		border-radius: 6px;
 		border: 2px solid white;
 		border-radius: 15px;
 }
 
 .myButton:hover {
-	background-color: #2F4F4F;
+	background-color: #9c3e61ff;
 }
 .myButton:active {
 	position:relative;
@@ -45,13 +43,13 @@
 		font-size: 20px;
 		margin-left: 10px;
 		color: #ffffff;
-		background-color: #CD5C5C;		;
+		background-color: #CD5C5C;
 		border-radius: 6px;
 		border: 2px solid white;
 		border-radius: 15px;
 }
 .myButtonTwo:hover {
-	background-color: #800080;
+	background-color: #603381;
 }
 .myButtonTwo:active {
 	position:relative;
@@ -116,12 +114,14 @@
 
 .title-Menu{
 	display: inline;
+
+
 }
 
 .title-Menu h1 {
 	text-align: center;
-	font-size: 40px;
-	margin : 10px;
+	font-size: 0px;
+	margin : 0px;
 	color: white;
 	text-decoration: underline;
 	background-color: #3CB371;
@@ -132,10 +132,10 @@
 .title-Menu p{
 	text-align: left;
 	font-size: 40px;
-	margin : 10px;
+	margin : .7px;
 	color: white;
 	text-decoration: underline;
-	background-color:gray;
+	background-color: #333;
 	width: 100%;
 
 }
@@ -151,24 +151,45 @@
 	display: flex;
 	width: 60%;
 
+
 	font-size: calc(10px + 2vmin);
 	color: white;
 	margin: 0px;
 	list-style: none;
-
-
 }
+
+.itemsSubmenu{
+  float: left;
+  width: 40%;
+  align-items: flex;
+  justify-content: center;
+  font-size: 1.1em;
+  position:relative;
+  margin: 10px;
+  display: block;
+
+  left:20; right:0;
+}
+
 
 .Cont2 {
 	float: right;
 	background-color: white;
-	width: 35%;
+	width: 50%;
 	align-items: float;
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
 	color: black;
 	margin: 10px;
 	outline: dotted #3CB371;
-	-moz-outline-radius: 60% 1em 25px;
+	-moz-outline-radius: 5% 1em 25px;
 	position:absolute; top:20; right:0;
+}
+
+.form {
+  justify-content: left;
+}
+
+.buttonsSubmenu{
+  font-size: 1em;
 }
