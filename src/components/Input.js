@@ -1,38 +1,69 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-class MyForm extends React.Component {
+class InputTable extends React.Component {
+   constructor(props) {
+      super(props);
+      
+      this.state = {
+         data: ''
+      }
+      this.updateState = this.updateState.bind(this);
+   };
+   updateState(e) {
+      this.setState({data: e.target.value});
+   }
+   render() {
+      return (
+         <div>
+            <input type = "text" value = {this.state.data} 
+               onChange = {this.updateState} />
+            <h4>{this.state.data}</h4>
+         </div>
+      );
+   }
+}
+export default InputTable;
+
+
+
+
+
+
+
+
+/*import React from 'react';
+
+class InputTable extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      username: '',
-      age: null,
-    };
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
-  myChangeHandler = (event) => {
-    let nam = event.target.name;
-    let val = event.target.value;
-    this.setState({[nam]: val});
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
   }
+
+  handleSubmit(event) {
+   const Value = this.state.value;
+   console.log(Value);
+    event.preventDefault();
+  }
+
   render() {
     return (
-      <form>
-      <h1>Hello {this.state.table} {this.state.name}</h1>
-      <p>Enter your table:</p>
-      <input
-        type='text'
-        name='table'
-        onChange={this.myChangeHandler}
-      />
-      <p>Enter your name:</p>
-      <input
-        type='text'
-        name='name'
-        onChange={this.myChangeHandler}
-      />
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Table:
+          <input type="text" placeholder="Nombre del cliente" value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <input id="AddTable" type="submit" value="ok" className="InputButtom" />
+        <a href="#Cont2"></a>
       </form>
     );
   }
 }
 
-ReactDOM.render(<MyForm />, document.getElementById('root'));
+export default InputTable;*/
