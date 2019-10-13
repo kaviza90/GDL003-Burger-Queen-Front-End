@@ -15,28 +15,32 @@ class VeganFood extends React.Component{
       order: [ ]
     };
     this.handleClick = this.handleClick.bind(this);
+  
 
   //  this.setItems = this.setItems.bind(this);
 };
-
-
-updateState(e) {
-  this.setState({order: e.target.value});
-}
 
 setItems = (results)=> {
     this.setState({
       results: results
     })
-  }
-
-
-handleClick(result){
-  const { results } = this.state.results;
-  console.log({result});
 }
 
 
+handleClick(result){
+    const { results } = this.state.results;
+
+    const product = result.name;
+
+    const order = [];
+      const productSelected = order.push(product);
+
+    this.setState({
+      order: product
+    })
+    console.log({order});
+    console.log(product);
+}
 
   componentDidMount() {
     const { results } = this.state;
@@ -49,7 +53,7 @@ handleClick(result){
       <div className="App">
         <header className="App-header">
           <h3 className="Logo">TLAKUALI</h3>
-          
+
         </header>
 
         <div>
@@ -67,7 +71,7 @@ handleClick(result){
               {this.state.results.map((result, index)=> (
                   <li key={index}>
                       <button className="buttonsSubmenu myButton myButtonTwo"
-                              onClick={ () => this.handleClick(result)}>
+                          onClick={ () => this.handleClick(result)}>
                           {result.name}
                       </button>
                     </li>
@@ -83,6 +87,7 @@ handleClick(result){
               <div className="orderForm">
                   <p className="form">MESA</p>
                   <p>Ticket</p>
+
               </div>
               <div className="orderList">
                 <p>orden{this.state.order}</p>

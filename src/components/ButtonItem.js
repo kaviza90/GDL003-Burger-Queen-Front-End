@@ -3,11 +3,11 @@ import React from 'react';
 import ContainerOne from './ContainerOne';
 import '../all.css';
 
-const API = 'https://rickandmortyapi.com/api/character/';
+const API = 'https://tlakuali-app.herokuapp.com/orders';
 const dr = '?name=rick';
 
 class ButtonItem extends React.Component {
-    types = ["Alive", "Dead", "unknown"];
+    types = ["hola", "Untitled Order"];
 
     constructor(props) {
     super(props);
@@ -21,17 +21,17 @@ class ButtonItem extends React.Component {
   }
 
   handleClick(type) {
-       const productsType = this.state.results.filter((product) => (type === product.status) );
-       const arrayOfProducts = productsType.forEach(function(element) {
+       const productsType = this.state.results.filter((product) => (type === product.title) );
+    /*   const arrayOfProducts = productsType.forEach(function(element) {
          console.log("nombre: " + element.name + " location: " + element.location.name);
         })
-       console.log(productsType);
+       console.log(productsType); */
       this.props.setItems(productsType);
   }
 
 
   fetchFunction() {
-    fetch(API + dr)
+    fetch(API)
       .then((response) => {
           if (response.ok) {
             return response.json();
@@ -41,13 +41,16 @@ class ButtonItem extends React.Component {
         })
       //  .then(response => {response.json()})
       .then(parsedJSON => this.setState({
-        results: parsedJSON.results
+        results: parsedJSON
+
       }))
+
 
       //.then(api => this.setState({ results: api.results }))
       .catch(error => this.setState({
         error
       }));
+
   }
 
   componentDidMount() {
@@ -67,7 +70,7 @@ class ButtonItem extends React.Component {
             {this.types.map((type, index)=> (
               <li key={index}>
                 <button className = "myButton" onClick = {
-                  () => this.handleClick(type) } > { type } { this.location }
+                  () => this.handleClick(type) } > { type } { this.title }
                 </button>
               </li>
             ))}
