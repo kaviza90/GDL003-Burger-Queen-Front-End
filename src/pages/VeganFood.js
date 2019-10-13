@@ -3,6 +3,8 @@ import ButtonItem from '../components/ButtonItem';
 import ContainerOne from '../components/ContainerOne';
 import ButtonItemTwo from '../components/ButtonItemTwo';
 import Item from '../components/Item';
+import InputTable from '../components/Input';
+import Comanda from '../components/Comanda';
 
 import '../all.css';
 
@@ -12,13 +14,15 @@ class VeganFood extends React.Component{
     super(props);
     this.state = {
       results: [ ],
-      order: [ ]
+      order: [ ],
+     
     };
     this.handleClick = this.handleClick.bind(this);
   
 
   //  this.setItems = this.setItems.bind(this);
 };
+ 
 
 setItems = (results)=> {
     this.setState({
@@ -51,9 +55,8 @@ handleClick(result){
   render(){
     return(
       <div className="App">
-        <header className="App-header">
-          <h3 className="Logo">TLAKUALI</h3>
-
+        <header className="App-header"> 
+          <h3 className="Logo">TLAKUALI</h3>         
         </header>
 
         <div>
@@ -84,6 +87,8 @@ handleClick(result){
 
           <div className="order Cont2">
               <h1>VeganFood</h1>
+              <InputTable/>
+              <Comanda/>
               <div className="orderForm">
                   <p className="form">MESA</p>
                   <p>Ticket</p>

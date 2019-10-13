@@ -70,7 +70,9 @@ class ButtonItem extends React.Component {
             {this.types.map((type, index)=> (
               <li key={index}>
                 <button className = "myButton" onClick = {
+        
                   () => this.handleClick(type) } > { type } { this.title }
+
                 </button>
               </li>
             ))}
