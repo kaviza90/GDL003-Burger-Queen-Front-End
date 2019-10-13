@@ -12,10 +12,10 @@ class VeganFood extends React.Component{
     super(props);
     this.state = {
       results: [ ],
-      order: [ ]
+      order: []
     };
     this.handleClick = this.handleClick.bind(this);
-  
+
 
   //  this.setItems = this.setItems.bind(this);
 };
@@ -72,7 +72,7 @@ handleClick(result){
                   <li key={index}>
                       <button className="buttonsSubmenu myButton myButtonTwo"
                           onClick={ () => this.handleClick(result)}>
-                          {result.name}
+                          {result.name} ${result.price}
                       </button>
                     </li>
                   )
@@ -90,7 +90,7 @@ handleClick(result){
 
               </div>
               <div className="orderList">
-                <p>orden{this.state.order}</p>
+                <p>orden {this.state.order} </p>
 
               </div>
 

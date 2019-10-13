@@ -3,11 +3,11 @@ import React from 'react';
 import ContainerOne from './ContainerOne';
 import '../all.css';
 
-const API = 'https://tlakuali-app.herokuapp.com/orders';
+const API = 'https://tlakuali-app.herokuapp.com/products';
 const dr = '?name=rick';
 
 class ButtonItem extends React.Component {
-    types = ["hola", "Untitled Order"];
+    types = ["Entry", "Main Dish", "Dessert", "Drinks"];
 
     constructor(props) {
     super(props);
@@ -21,7 +21,7 @@ class ButtonItem extends React.Component {
   }
 
   handleClick(type) {
-       const productsType = this.state.results.filter((product) => (type === product.title) );
+       const productsType = this.state.results.filter((product) => (type === product.category) );
     /*   const arrayOfProducts = productsType.forEach(function(element) {
          console.log("nombre: " + element.name + " location: " + element.location.name);
         })
@@ -70,7 +70,7 @@ class ButtonItem extends React.Component {
             {this.types.map((type, index)=> (
               <li key={index}>
                 <button className = "myButton" onClick = {
-                  () => this.handleClick(type) } > { type } { this.title }
+                  () => this.handleClick(type) } > { type } { this.category }
                 </button>
               </li>
             ))}
