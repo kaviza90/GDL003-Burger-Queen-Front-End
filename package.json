@@ -22,8 +22,8 @@
     "extends": "react-app"
   },
   "homepage": {
-    'https://paulinafranco.github.io/GDL003-Burger-Queen-Front-End/'
-  }
+    "https://paulinafranco.github.io/GDL003-Burger-Queen-Front-End/""
+  },
   "browserslist": {
     "production": [
       ">0.2%",
