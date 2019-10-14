@@ -4,7 +4,7 @@ import ContainerOne from '../components/ContainerOne';
 import ButtonItemTwo from '../components/ButtonItemTwo';
 import Item from '../components/Item';
 import InputTable from '../components/Input';
-import Comanda from '../components/Comanda';
+import OrderForm from '../components/OrderForm';
 
 import '../all.css';
 
@@ -14,7 +14,8 @@ class VeganFood extends React.Component{
     super(props);
     this.state = {
       results: [ ],
-      order: []
+      order: [],
+      prices: []
     };
     this.handleClick = this.handleClick.bind(this);
 
@@ -22,27 +23,49 @@ class VeganFood extends React.Component{
   //  this.setItems = this.setItems.bind(this);
 };
 
-
 setItems = (results)=> {
     this.setState({
       results: results
     })
 }
 
-
 handleClick(result){
     const { results } = this.state.results;
 
-    const product = result.name;
+  //  const price = parseInt(result.price);
 
-    const order = [];
-      const productSelected = order.push(product);
+    const { order } = this.state;
+      const product = result.name + " " + "$" + result.price;
+
+    const { prices } = this.state;
+        const price = result.price;
+
+
+  //  const newOrder = [];
+    //  const productSelected = newOrder.push("'" + result.name + "'" + ",");
+
+  //  const completeArray = newOrder + this.state.order;
+
+//    const newPrice = [];
+  //    const pricesSelected = newPrice.push(price);
+/*
+    this.setState({
+      order: (this.state.order).concat(newOrder),
+      prices: this.state.prices + newPrice,
+      total: price
+      })
+*/
+
 
     this.setState({
-      order: product
+      order: [
+        ...order,
+        product
+
+      ]
+
     })
-    console.log({order});
-    console.log(product);
+
 }
 
   componentDidMount() {
@@ -86,15 +109,41 @@ handleClick(result){
 
           <div className="order Cont2">
               <h1>VeganFood</h1>
-              <InputTable/>
-              <Comanda/>
+              <InputTable />
               <div className="orderForm">
-                  <p className="form">MESA</p>
-                  <p>Ticket</p>
+                  <table id="tableOrder" class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Productos</th>
+                        </tr>
+                      </thead>
 
+                      <div>
+                        <ul>
+
+                          {this.state.order.map((prods, price, index) => (
+                             <li key={index}>
+                                <tbody>
+                                    <td>{prods}</td>
+
+                                </tbody>
+                              </li>
+                            ))}
+                        </ul>
+                      </div>
+
+
+                     <tfoot>
+                        <tr>
+                          <td>TOTAL:</td>
+                          <td id="total">s/ 0.00</td>
+                        </tr>
+                      </tfoot>
+                  </table>
               </div>
-              <div className="orderList">
-                <p>orden {this.state.order} </p>
+
+              <div >
+                <button className="submitButton"> ENVIAR </button>
 
               </div>
 
@@ -107,8 +156,6 @@ handleClick(result){
     )
   }
 }
-
-
 
 
 export default VeganFood;

@@ -56,6 +56,25 @@
 	top:1px;
 }
 
+.submitButton {
+  text-decoration: none;
+		padding: 18px;
+		font-weight: 600;
+		font-size: 17px;
+		margin-left: 10px;
+		color: #ffffff;
+		background-color: #444;
+		border-radius: 6px;
+		border: 2px solid white;
+		border-radius: 15px;
+}
+.submitButton:hover {
+	background-color: #000;
+}
+.submitButton:active {
+	position:relative;
+	top:1px;
+}
 .Button {
 	/*-moz-box-shadow: 6px 10px 0px 3px #f0f0f0;
 	-webkit-box-shadow: 6px 10px 0px 3px #f0f0f0;

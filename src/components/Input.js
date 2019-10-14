@@ -3,7 +3,7 @@ import React from 'react';
 class InputTable extends React.Component {
    constructor(props) {
       super(props);
-      
+
       this.state = {
          data: ''
       }
@@ -15,9 +15,9 @@ class InputTable extends React.Component {
    render() {
       return (
          <div>
-            <input type = "text" value = {this.state.data} 
+            <input type = "text" value = {this.state.data}
                onChange = {this.updateState} />
-            <h4>{this.state.data}</h4>
+          <p>Cliente:</p>  <h4>{this.state.data}</h4>
          </div>
       );
    }
