@@ -215,3 +215,7 @@
 .buttonsSubmenu{
   font-size: 1em;
 }
+
+.table {
+  list-style: none;
+}

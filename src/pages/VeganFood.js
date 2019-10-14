@@ -15,7 +15,8 @@ class VeganFood extends React.Component{
     this.state = {
       results: [ ],
       order: [],
-      prices: []
+      prices: [],
+      total: 0
     };
     this.handleClick = this.handleClick.bind(this);
 
@@ -40,6 +41,8 @@ handleClick(result){
     const { prices } = this.state;
         const price = result.price;
 
+    const { total } = this.state;
+      const tot = parseInt(result.price)+ parseInt(this.state.total);
 
   //  const newOrder = [];
     //  const productSelected = newOrder.push("'" + result.name + "'" + ",");
@@ -62,7 +65,8 @@ handleClick(result){
         ...order,
         product
 
-      ]
+      ],
+      total: tot
 
     })
 
@@ -111,7 +115,7 @@ handleClick(result){
               <h1>VeganFood</h1>
               <InputTable />
               <div className="orderForm">
-                  <table id="tableOrder" class="table">
+                  <table id="tableOrder" className="table">
                       <thead>
                         <tr>
                           <th scope="col">Productos</th>
@@ -122,7 +126,7 @@ handleClick(result){
                         <ul>
 
                           {this.state.order.map((prods, price, index) => (
-                             <li key={index}>
+                             <li key={index} className="table">
                                 <tbody>
                                     <td>{prods}</td>
 
@@ -136,7 +140,7 @@ handleClick(result){
                      <tfoot>
                         <tr>
                           <td>TOTAL:</td>
-                          <td id="total">s/ 0.00</td>
+                          <td id="total">{this.state.total}</td>
                         </tr>
                       </tfoot>
                   </table>
