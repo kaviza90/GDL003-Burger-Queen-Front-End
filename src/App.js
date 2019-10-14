@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import VeganFood from './pages/VeganFood';
 //import FetchApi from './components/Fetch';
@@ -7,11 +7,11 @@ import VeganFood from './pages/VeganFood';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
          <Switch>
             <Route exact path="/VeganFood" component={VeganFood}/>
         </Switch>
-        </BrowserRouter>
+        </HashRouter>
   );
 }
 export default App;
