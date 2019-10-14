@@ -1,9 +1,7 @@
 import React from 'react';
-import ButtonItem from './ButtonItem'
+import ButtonItemTwo from './ButtonItemTwo';
 
-
-const API = 'https://rickandmortyapi.com/api/character/';
-const defaultQuery = '?name=dr&gender=female';
+const API = 'https://tlakuali-app.herokuapp.com/orders';
 
 
 
@@ -21,7 +19,7 @@ class FetchApi extends React.Component {
   }
 
   myfunction() {
-    fetch(API + defaultQuery)
+    fetch(API)
       .then(
          (response) => {
         if (response.ok) {
@@ -31,7 +29,7 @@ class FetchApi extends React.Component {
         }
       })
     //  .then(response => {response.json()})
-      .then(parsedJSON => this.setState( {results: parsedJSON.results}))
+      .then(parsedJSON => this.setState( {results: parsedJSON}))
       //.then(api => this.setState({ results: api.results }))
       .catch(error => this.setState({ error }));
   }
@@ -51,14 +49,20 @@ render() {
 
 
   return (
-    <ul>
-      {this.state.results.map(result => (
+  /*  <ul>
+      {this.state..map(result => (
         <li key={result.id}>
-          <ButtonItem  />
+          <ButtonItemTwo  />
 
         </li>
       ))}
     </ul>
+    */
+
+    <div>
+      <button onClick = { () => console.log(this.state.results)}>fetch
+      </button>
+    </div>
   );
 }
 

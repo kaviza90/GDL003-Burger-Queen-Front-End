@@ -4,7 +4,7 @@ import ContainerOne from './ContainerOne';
 import '../all.css';
 
 const API = 'https://tlakuali-app.herokuapp.com/products';
-const dr = '?name=rick';
+
 
 class ButtonItem extends React.Component {
     types = ["Entry", "Main Dish", "Dessert", "Drinks"];

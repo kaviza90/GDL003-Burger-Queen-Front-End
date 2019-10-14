@@ -5,6 +5,7 @@ import ButtonItemTwo from '../components/ButtonItemTwo';
 import Item from '../components/Item';
 import InputTable from '../components/Input';
 import OrderForm from '../components/OrderForm';
+import FetchApi from '../components/Fetch';
 
 import '../all.css';
 
@@ -59,7 +60,6 @@ handleClick(result){
       })
 */
 
-
     this.setState({
       order: [
         ...order,
@@ -113,7 +113,8 @@ handleClick(result){
 
           <div className="order Cont2">
               <h1>VeganFood</h1>
-              <InputTable />
+              <InputTable
+               />
               <div className="orderForm">
                   <table id="tableOrder" className="table">
                       <thead>
@@ -125,7 +126,7 @@ handleClick(result){
                       <div>
                         <ul>
 
-                          {this.state.order.map((prods, price, index) => (
+                          {this.state.order.map((prods, index) => (
                              <li key={index} className="table">
                                 <tbody>
                                     <td>{prods}</td>
@@ -144,11 +145,6 @@ handleClick(result){
                         </tr>
                       </tfoot>
                   </table>
-              </div>
-
-              <div >
-                <button className="submitButton"> ENVIAR </button>
-
               </div>
 
           </div>
