@@ -9,7 +9,7 @@ function App() {
   return (
     <HashRouter>
          <Switch>
-            <Route exact path="/VeganFood" component={VeganFood}/>
+            <Route exact path="/" component={VeganFood}/>
         </Switch>
         </HashRouter>
   );

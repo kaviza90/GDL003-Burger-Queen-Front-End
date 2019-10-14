@@ -15,15 +15,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm.run.build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": {
-    "https://paulinafranco.github.io/GDL003-Burger-Queen-Front-End/"
-  },
+  "homepage": "https://paulinafranco.github.io/GDL003-Burger-Queen-Front-End/",
   "browserslist": {
     "production": [
       ">0.2%",
