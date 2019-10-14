@@ -22,7 +22,7 @@
     "extends": "react-app"
   },
   "homepage": {
-    'https://paulinafranco.github.io/GDL003-Burger-Queen-Front-End/src/pages/VeganFood'
+    'https://paulinafranco.github.io/GDL003-Burger-Queen-Front-End/'
   }
   "browserslist": {
     "production": [
