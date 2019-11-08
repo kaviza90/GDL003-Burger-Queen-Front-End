@@ -1,0 +1,41 @@
+{
+  "names": [
+    {
+      "name": "black",
+      "category": "hue",
+      "price": "primary",
+
+      }
+    },
+    {
+      "name": "white",
+      "category": "value",
+      "price": "primary",
+      }
+    },
+    {
+      "name": "red",
+      "category": "hue",
+      "price": "primary",
+      }
+    },
+    {
+      "name": "blue",
+      "category": "hue",
+      "price": "primary",
+      }
+    },
+    {
+      "name": "yellow",
+      "category": "hue",
+      "price": "primary",
+      }
+    },
+    {
+      "name": "green",
+      "category": "hue",
+      "price": "secondary",
+      }
+    },
+  ]
+}

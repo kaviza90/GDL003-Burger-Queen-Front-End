@@ -1,7 +1,8 @@
 import React from 'react';
+import ButtonItemTwo from './ButtonItemTwo';
 
-const API = 'https://rickandmortyapi.com/api/character/';
-const defaultQuery = '?name=dr&gender=';
+const API = 'https://tlakuali-app.herokuapp.com/orders';
+
 
 
 class FetchApi extends React.Component {
@@ -10,30 +11,62 @@ class FetchApi extends React.Component {
 
     this.state = {
       results: [],
+      name: [],
+      error: null,
     };
+    this.myfunction = this.myfunction.bind(this);
+
   }
+
+  myfunction() {
+    fetch(API)
+      .then(
+         (response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error ('Something went wrong ...');
+        }
+      })
+    //  .then(response => {response.json()})
+      .then(parsedJSON => this.setState( {results: parsedJSON}))
+      //.then(api => this.setState({ results: api.results }))
+      .catch(error => this.setState({ error }));
+  }
+
 
   componentDidMount() {
-    fetch(API + defaultQuery)
-      .then(response => response.json())
-      .then(data => this.setState({ results: data.results }))
-
+    this.myfunction();
   }
+
+
 render() {
-  const { results } = this.state;
+  const { results, error } = this.state;
+
+  if (error) {
+    return <p>{error.message}</p>;
+  } else {
+
 
   return (
-    <ul>
-      {results.map(point =>
-        <li key={point.id}>
-          <a href={point.image}>{point.name}</a>
+  /*  <ul>
+      {this.state..map(result => (
+        <li key={result.id}>
+          <ButtonItemTwo  />
+
         </li>
-      )}
+      ))}
     </ul>
+    */
+
+    <div>
+      <button onClick = { () => console.log(this.state.results)}>fetch
+      </button>
+    </div>
   );
 }
 
-
+}
 }
 
 export default FetchApi;

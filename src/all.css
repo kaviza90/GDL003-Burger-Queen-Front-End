@@ -7,13 +7,12 @@
     /* display: grid;
     grid-template-columns: 33% 33% 33%; */
     background-color:#b7e778;
-    width: 700px;
-    height: 400px;
+    width: 70vh;
+    height: 60vh;
     border-radius:30px;
     border:6px solid #ed7575;
     margin-top: 3%;
-    margin-left: 3%;
-
+    margin-left: 0%;
   }
 
 .myButton {
@@ -23,14 +22,14 @@
 		font-size: 20px;
 		margin-left: 10px;
 		color: #ffffff;
-		background-color: gray;
+		background-color: #01965eff;
 		border-radius: 6px;
 		border: 2px solid white;
 		border-radius: 15px;
 }
 
 .myButton:hover {
-	background-color: #2F4F4F;
+	background-color: #9c3e61ff;
 }
 .myButton:active {
 	position:relative;
@@ -44,23 +43,42 @@
 		font-size: 20px;
 		margin-left: 10px;
 		color: #ffffff;
-		background-color: #CD5C5C;		;
+		background-color: #CD5C5C;
 		border-radius: 6px;
 		border: 2px solid white;
 		border-radius: 15px;
 }
 .myButtonTwo:hover {
-	background-color: #800080;
+	background-color: #603381;
 }
 .myButtonTwo:active {
 	position:relative;
 	top:1px;
 }
 
+.submitButton {
+  text-decoration: none;
+		padding: 18px;
+		font-weight: 600;
+		font-size: 17px;
+		margin-left: 10px;
+		color: #ffffff;
+		background-color: #444;
+		border-radius: 6px;
+		border: 2px solid white;
+		border-radius: 15px;
+}
+.submitButton:hover {
+	background-color: #000;
+}
+.submitButton:active {
+	position:relative;
+	top:1px;
+}
 .Button {
-	-moz-box-shadow: 12px 20px 0px 3px #f0f0f0;
-	-webkit-box-shadow: 12px 20px 0px 3px #f0f0f0;
-	box-shadow: 12px 20px 0px 3px #8eb65b;
+	/*-moz-box-shadow: 6px 10px 0px 3px #f0f0f0;
+	-webkit-box-shadow: 6px 10px 0px 3px #f0f0f0;
+	box-shadow: 6px 10px 0px 3px #8eb65b; */
 	background-color:#40dab1;
 	-moz-border-radius:30px;
 	-webkit-border-radius:30px;
@@ -84,7 +102,7 @@
 	min-height: 20vh ;
 	border-style: 4px dotted coral;
 	background-image: url(data:image/jpeg;base64,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)
-	
+
 }
 
 .App-header ul{
@@ -115,26 +133,28 @@
 
 .title-Menu{
 	display: inline;
+
+
 }
 
 .title-Menu h1 {
 	text-align: center;
-	font-size: 40px;
-	margin : 10px;
+	font-size: 0px;
+	margin : 0px;
 	color: white;
 	text-decoration: underline;
 	background-color: #3CB371;
-	
+
 	display: inline;
 }
 
 .title-Menu p{
 	text-align: left;
 	font-size: 40px;
-	margin : 10px;
+	margin : .7px;
 	color: white;
 	text-decoration: underline;
-	background-color:gray;
+	background-color: #333;
 	width: 100%;
 
 }
@@ -149,25 +169,53 @@
 	background-color: white;
 	display: flex;
 	width: 60%;
-	align-items: float;
+
+
 	font-size: calc(10px + 2vmin);
 	color: white;
-	margin: 10px;
+	margin: 0px;
 	list-style: none;
-	
-
 }
+.submenu{
+  list-style: none;
+}
+
+.itemsSubmenu{
+  float: left;
+  width: 40%;
+  align-items: flex;
+  justify-content: center;
+  font-size: 1.1em;
+  position:relative;
+  margin: 10px;
+  display: block;
+
+  left:20; right:0;
+}
+
 
 .Cont2 {
 	float: right;
 	background-color: white;
-	width: 35%;
+	width: 50%;
 	align-items: float;
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
 	color: black;
 	margin: 10px;
-	outline: dotted #3CB371; 
-	-moz-outline-radius: 60% 1em 25px;
+	outline: dotted #3CB371;
+	-moz-outline-radius: 5% 1em 25px;
 	position:absolute; top:20; right:0;
+}
+
+.form {
+  justify-content: left;
+}
+
+.buttonsSubmenu{
+  font-size: 1em;
+}
+
+.table {
+  list-style: none;
 }
